@@ -19,9 +19,9 @@
 # include <stdbool.h>
 # include <ctype.h>
 
-# define PI				3.14159265358979323846
-# define PRECISION		0.000000000000001
-# define TAYLOR_TERMS	20
+# define PI				3.1416
+# define PRECISION		0.0001
+# define TAYLOR_TERMS	10
 
 # define RED 	"\033[1;31m"
 # define GREEN 	"\033[1;32m"

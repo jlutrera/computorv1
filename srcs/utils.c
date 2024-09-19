@@ -256,7 +256,7 @@ char get_letter(char *str)
 
 void	printf_number(double d)
 {
-	if (d == 0)
+	if (d < 0 + PRECISION && d > 0 - PRECISION)
 		printf("0");
 	else if (isinteger(d))
 		printf("%0.0f", d);

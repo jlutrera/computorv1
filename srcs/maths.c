@@ -62,8 +62,8 @@ double	ft_cos(double x)
 	double	term;
 	double	sum;
 
-	sum = 1.0;
-	for (int n=1; n < TAYLOR_TERMS; n++)
+	sum = 0;
+	for (int n = 0; n < TAYLOR_TERMS; n++)
 	{
 		term = ft_power(-1, n) * ft_power(x, 2*n) / ft_factorial(2*n);
 		sum += term;
@@ -77,9 +77,13 @@ double ft_arccos(double x)
 	double term;
 	double sum;
 
-	term = x;
-	sum = term;
-	for (int n=1; n < TAYLOR_TERMS; n++)
+	if (x == 1)
+		return 0;
+	if (x == -1)
+		return PI;
+
+	sum = 0;
+	for (int n = 0; n < TAYLOR_TERMS; n++)
 	{
 		term = (ft_factorial(2 * n) / (ft_power(4, n) * ft_power(ft_factorial(n), 2) * (2 * n + 1))) * ft_power(x, 2 * n + 1);
 		sum += term;
